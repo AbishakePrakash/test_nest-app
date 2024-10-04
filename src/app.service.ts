@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { User } from './app.controller';
 
 @Injectable()
 export class AppService {
@@ -9,5 +10,10 @@ export class AppService {
   launcher() {
     console.log('CRM Launcher called');
     return 'CRM Launcher';
+  }
+
+  postCall(payload: User) {
+    console.log('Post payload: ', payload);
+    return payload;
   }
 }
