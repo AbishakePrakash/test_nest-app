@@ -8,8 +8,8 @@ export class AppService {
   }
 
   launcher() {
-    console.log('CRM Launcher called');
-    return 'CRM Launcher';
+    console.log('CBOE Alert Test');
+    return 'CBOE Alert Test';
   }
 
   postCall(payload: User) {
