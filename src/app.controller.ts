@@ -10,12 +10,17 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(): string {
+  launcher(): string {
     return this.appService.launcher();
   }
 
+  @Post('json')
+  tradeAlertJson(@Body() payload: User) {
+    return this.appService.tradeAlertJson(payload);
+  }
+
   @Post()
-  postCall(@Body() payload: User) {
-    return this.appService.postCall(payload);
+  tradeAlertMessage() {
+    return this.appService.tradeAlertMessage();
   }
 }

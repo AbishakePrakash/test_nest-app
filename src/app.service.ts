@@ -12,8 +12,12 @@ export class AppService {
     return 'CBOE Alert Test';
   }
 
-  postCall(payload: User) {
+  tradeAlertJson(payload: User) {
     console.log('Post payload: ', payload);
     return payload;
+  }
+
+  tradeAlertMessage() {
+    return 'Payment Successfull';
   }
 }
